@@ -50,6 +50,18 @@ body {
   font-size: 2rem;
 }
 
+#local-guides .carousel-caption a:link,
+#local-guides .carousel-caption a:active {
+  font-size: 2rem;
+  color: white;
+}
+
+#local-guides .carousel-caption a:hover,
+#local-guides .carousel-caption a:active {
+  font-size: 4rem;
+  color: #FF9900;
+}
+
 #categories div:hover {
   background: rgba(212, 205, 17, 0.7);
 }
@@ -77,6 +89,11 @@ body {
 #sports-categ a,
 #food-categ a {
   text-decoration: none;
+}
+
+.jumbotron {
+  background-color: rgba(211, 211, 211, 0.4);
+  color: #FF9900;
 }
 
 @media only screen and (min-width: 576px) {

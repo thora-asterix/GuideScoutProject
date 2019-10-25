@@ -10,6 +10,7 @@ $light-green: #66CC35;
 $med-brown: #683300;
 $light-blue: #6699CC ;
 $light-beige: #f6f1ea;
+$logo-brown: #695a60;
 
 
 body {
@@ -58,7 +59,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-   background-color: rgba(153, 0, 0, 0.4);
+    background-color: rgba(153, 0, 0, 0.4);
 }
 
 #guides-panel {
@@ -67,6 +68,25 @@ body {
         font-size: 2rem;
         // color: $gray-700;
     }
+}
+ 
+#local-guides {
+
+    .carousel-caption {
+
+    a:link,
+     a:active {
+        font-size: 2rem;
+         color: white;
+         //ask Anton why it doesnt work
+    }
+
+    a:hover,
+    a:active {
+        font-size: 4rem;
+        color: $light-orange;
+   }
+  }
 }
 
 #categories {
@@ -78,13 +98,12 @@ body {
 
   }
 
-
-
 #culture-categ,
 #adventure-categ,
 #sports-categ,
 #food-categ
  {
+
     position: relative;
     .over-cover {
         position: absolute;
@@ -99,6 +118,10 @@ body {
 
 }
 
+.jumbotron {
+    background-color: rgba(211,211,211,0.4);
+    color: $light-orange;
+}
 //Media Queries
 
 @media only screen and (min-width: 576px) {
