@@ -1,0 +1,168 @@
+$deep-red: #990000;
+$deep-orange: #CC3300 ;
+$med-orange:  #da500e;
+$deep-yellow:  #FFCC33;
+$light-orange: #FF9900;
+$light-yellow: #FFFFCC;
+$deep-green: #336633;
+$med-grenn: #669933;
+$light-green: #66CC35;
+$med-brown: #683300;
+$light-blue: #6699CC ;
+$light-beige: #f6f1ea;
+
+
+body {
+    
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+#header {
+    min-height: 500px;
+    background-image: url(../img/traveling.jpg);
+    background-position: top;
+    background-attachment: fixed;
+    position: relative;
+    
+    h1 {
+        font-weight: 300;
+        font-size: 2.5rem;
+        color: $light-beige;
+    }
+
+    button {
+        color: $deep-orange;
+    }
+}
+
+#main-nav {
+ background-color: $med-orange;
+
+    color: white;
+
+    .navbar-brand  {
+        color: white;
+    }
+     
+    a {
+        color:white;
+    }
+    
+    }
+
+.color-cover {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+   background-color: rgba(153, 0, 0, 0.4);
+}
+
+#guides-panel {
+    background-color: white;
+    h2 {
+        font-size: 2rem;
+        // color: $gray-700;
+    }
+}
+
+#categories {
+    // padding: 3rem 0 3rem;    
+    // background-color: $deep-red;   
+    div:hover {
+        background:  rgba(212,205,17,.7);
+    }
+
+  }
+
+
+
+#culture-categ,
+#adventure-categ,
+#sports-categ,
+#food-categ
+ {
+    position: relative;
+    .over-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    a {
+        text-decoration: none;
+    }
+
+}
+
+//Media Queries
+
+@media only screen and (min-width: 576px) {
+
+    #header {
+        min-height: 500px;
+        background-image: url(../img/traveling.jpg);
+        background-position: top;
+        background-attachment: fixed;
+        position: relative;
+        
+        h1 {
+            font-weight: 300;
+            font-size: 3rem;
+            color: $light-beige;
+        }
+    
+        button {
+            color: $deep-orange;
+        }
+    }
+}
+  
+
+
+@media only screen and (min-width: 768px) {
+
+    #header {
+        min-height: 500px;
+        background-image: url(../img/traveling.jpg);
+        background-position: top;
+        background-attachment: fixed;
+        position: relative;
+        
+        h1 {
+            font-weight: 300;
+            font-size: 4rem;
+            color: $light-beige;
+        }
+    
+        button {
+            color: $deep-orange;
+        }
+    }
+}
+  
+@media only screen and (min-width: 992px) {
+
+    #header {
+        min-height: 500px;
+        background-image: url(../img/traveling.jpg);
+        background-position: top;
+        background-attachment: fixed;
+        position: relative;
+        
+        h1 {
+            font-weight: 300;
+            font-size: 5rem;
+            color: $light-beige;
+        }
+    
+        button {
+            color: $deep-orange;
+        }
+    }
+}
+  
