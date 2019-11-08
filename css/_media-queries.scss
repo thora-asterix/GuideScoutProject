@@ -1,0 +1,65 @@
+// Media Queries
+
+@media only screen and (min-width: 576px) {
+
+    #header {
+        min-height: 500px;
+        background-image: url(../img/traveling.jpg);
+        background-position: top;
+        background-attachment: fixed;
+        position: relative;
+        
+        h1 {
+            font-weight: 300;
+            font-size: 3rem;
+            color: $light-beige;
+        }
+    
+        button {
+            color: $deep-orange;
+        }
+    }
+}
+  
+
+@media only screen and (min-width: 768px) {
+
+    #header {
+        min-height: 500px;
+        background-image: url(../img/traveling.jpg);
+        background-position: top;
+        background-attachment: fixed;
+        position: relative;
+        
+        h1 {
+            font-weight: 300;
+            font-size: 4rem;
+            color: $light-beige;
+        }
+    
+        button {
+            color: $deep-orange;
+        }
+    }
+}
+  
+@media only screen and (min-width: 992px) {
+
+    #header {
+        min-height: 500px;
+        background-image: url(../img/traveling.jpg);
+        background-position: top;
+        background-attachment: fixed;
+        position: relative;
+        
+        h1 {
+            font-weight: 300;
+            font-size: 5rem;
+            color: $light-beige;
+        }
+    
+        button {
+            color: $deep-orange;
+        }
+    }
+}

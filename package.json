@@ -2,12 +2,12 @@
   "name": "guidescoutproject",
   "version": "1.0.0",
   "description": "Guide Scout Project",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "lite": "lite-server",
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1"
-    },
+  },
   "author": "Thora",
   "license": "ISC",
   "devDependencies": {
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "http-server": "^0.11.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9"
   }

@@ -6,21 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Guide Scout</title>
 </head>
 <body>
+  <!--Header-->
    <header id="header">
       <div class="color-cover">
       <div class="container-fluid">
           <div class="row pt-4 ">
               <div class="col-12  col-md-7 mt-1 mb-5 my-md-0">
-                <img class="img-fluid d-block mx-auto ml-md-0"  src="img/logoGuideScout.png" alt="logo">
+                <img class="img-fluid d-block mx-auto ml-md-0"  src="img/guideScoutLogo.png" alt="logo">
                 </div>
               <div class="col-12  col-md-5 ">
                   <div class="row justify-content-center justify-content-md-end">
-                    <button class="btn btn-lg">Book a Guide</button>
-                    <button class="btn btn-lg mx-2">Join Us</button>     
+                    <button class="btn btn-lg" data-toggle="modal" data-target="#register">Register</button>
+                    <button class="btn btn-lg mx-2" data-toggle="modal" data-target="#login">Login</button>     
               </div>
               </div>
           </div>
@@ -30,6 +32,64 @@
       </div>
     </div>
    </header>
+<!--Registration Modal-->
+<div class="modal fade" id="register">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h4 class="modal-title text-white">Register</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="usr">Name:</label>
+                <input type="text" class="form-control" id="usr" name="username">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" name="password">
+              </div>
+              <div class="form-group">
+                  <label for="re-pwd">Repeat Password:</label>
+                  <input type="password" class="form-control" id="re-pwd" name="password">
+                </div>              
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary">Submit</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!--Login Modal-->
+  <div class="modal fade" id="login">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-warning">
+            <h4 class="modal-title text-white">Login</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+              <div class="form-group">
+                  <label for="usr">Name:</label>
+                  <input type="text" class="form-control" id="usr" name="username">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" id="pwd" name="password">
+                </div>       
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary">Submit</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>    
+        </div>
+      </div>
+    </div>
+    
+<!--Guides Menu Panel-->
    <section id="guides-panel" class="py-5">
        <div class="container">
            <div class="row mb-5">
@@ -37,46 +97,47 @@
           </div>
           <div id="categories" class="row no-gutters">
                 <div id="food-categ" class="col-md-6 ">
-                        <img src="img/fish.jpg" class="img-fluid" alt="food and wine">
-                    <div class="over-cover d-flex"><a class="align-self-center mx-auto" href="#"><span class="display-4 text-white d-block">Food</span></a></div>
+                        <img src="img/fishdish.jpg" class="img-fluid" alt="food and wine">
+                    <div class="over-cover d-flex"><a class="align-self-center mx-auto" href="#food-header"><span class="display-4 text-white d-block">Food</span></a></div>
                   </div>
               <div id="adventure-categ" class="col-md-6">
                     <img src="img/ziplinning1.jpg" class="img-fluid" alt="food and wine">
-                <div class="over-cover d-flex"><a class="align-self-center mx-auto" href="#"><span class="display-4 text-white d-block">Adventure</span></a></div>
+                <div class="over-cover d-flex"><a class="align-self-center mx-auto" href="#adventure-header"><span class="display-4 text-white d-block">Adventure</span></a></div>
               </div>
               <div id="culture-categ" class="col-md-6">
                     <img src="img/museums1.jpg" class="img-fluid" alt="food and wine">
-                <div class="over-cover d-flex"><a class="align-self-center mx-auto" href="#"><span class="display-4 text-white">Culture</span></a></div>
+                <div class="over-cover d-flex"><a class="align-self-center mx-auto" href="#culture-header"><span class="display-4 text-white">Culture</span></a></div>
               </div>            
               <div id="sports-categ" class="col-md-6">
                     <img src="img/events2.jpg" class="img-fluid" alt="food and wine">
-                <div class="over-cover d-flex"><a class="align-self-center mx-auto" href="#"><span class="display-4 text-white">Events</span></a></div>
+                <div class="over-cover d-flex"><a class="align-self-center mx-auto" href="#events-header"><span class="display-4 text-white">Events</span></a></div>
               </div>   
           </div>  
        </div>
    </section>
+
+   <!--Scrolling Navigation Bar-->
    <nav id="main-nav" class="navbar navbar-expand-md navbar-light sticky-top">
-        <a class="navbar-brand" href="#header">Navbar</a>
+        <a class="navbar-brand" href="#header">Menu</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            <a class="nav-item nav-link active" href="#header">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#guides-panel">Guides</a>
+            <a class="nav-item nav-link" href="#jumbo-guides">Our Team</a>
+            <a class="nav-item nav-link" href="#contact-info">Contact Us</a>
+            <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#login">Login</a>
           </div>
         </div>
-      </nav>
-   <section>
+    </nav>
 
-        <div class="jumbotron jumbotron-fluid">
-          
-           <h2 class="text-center">Our local guides know the best our city has to offer</h2>
-    
-        </div>
-    </section>
+    <!--Local guides carousel-->
+     <div class="jumbotron jumbotron-fluid grey-jumbo" id="jumbo-guides">
+       <h2 class="text-center">Our local guides know the best our city has to offer</h2>
+     </div>
+        
     <section id="local-guides" class="local-guides">
         <div class="container">
             <div class="row mb-5">
@@ -95,9 +156,12 @@
                                     <img src="img/aniaborder.jpg" alt="Local Guide" class="img-fluid">
                                    
                                     <div class="carousel-caption">
-                                      <h3 class="text-center mb-0">
+                                            <h3 class="text-center mb-0">
+                                                 <a type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#ania">Ania</a>
+                                            </h3>
+                                      <!-- <h3 class="text-center mb-0">
                                           <a class="text-white"  href="https://getbootstrap.com/docs/4.0/getting-started/theming/">Ania</a>
-                                      </h3>
+                                      </h3> -->
                                     
                                     </div>   
                                   </div>
@@ -105,16 +169,24 @@
                                     <img src="img/saihborder.jpg" alt="Chicago" class="img-fluid">
                                     <div class="carousel-caption">
                                       <h3 class="text-center mb-0">
-                                          <a class="text-white"  href="https://getbootstrap.com/docs/4.0/getting-started/theming/">Saih</a>
+                                          <a type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#saih">Saih</a>
                                       </h3>
                                     </div>   
                                   </div>
                                   <div class="carousel-item">
                                     <img src="img/taniaborder.jpg" alt="New York" class="img-fluid">
                                     <div class="carousel-caption">
-                                      <h3 class="text-center mb-0">
-                                            <a class="text-white"  href="https://getbootstrap.com/docs/4.0/getting-started/theming/">Tania</a>
-                                      </h3>
+                                         <h3 class="text-center mb-0">
+                                            <a type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#tania">Tania</a>
+                                         </h3>
+                                    </div>   
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="img/mariaborder.jpg" alt="New York" class="img-fluid">
+                                    <div class="carousel-caption">
+                                         <h3 class="text-center mb-0">
+                                            <a type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#maria">Maria</a>
+                                         </h3>
                                     </div>   
                                   </div>
                                 </div>
@@ -132,28 +204,317 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <div class="row mb-3">
-                <div class="col-12 col-md-4">               
-                    <img src="img/logoGuideScoutGrey.png" class="d-block img-fluid"  alt="">
+<!-- Modal -->
+<div class="modal fade" id="saih" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-warning text-center">
+              <h3 class="modal-title font-weight-bold" id="exampleModalLabel">Saih</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img class="img-fluid" src="img/saih.jpg" alt="local guide">
+              <p class="m-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellat, ipsum dolorum ab dignissimos quae aperiam, dolores nisi perferendis ad voluptates recusandae? Doloremque, nesciunt necessitatibus. Voluptatum explicabo vero in incidunt?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-warning">Book with Saih</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+<div class="modal fade" id="tania" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header bg-warning text-center">
+                    <h3 class="modal-title font-weight-bold" id="exampleModalLabel">Tania</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="img-fluid" src="img/tania.jpg" alt="local guide">
+                    <p class="m-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellat, ipsum dolorum ab dignissimos quae aperiam, dolores nisi perferendis ad voluptates recusandae? Doloremque, nesciunt necessitatibus. Voluptatum explicabo vero in incidunt?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning">Book With Tania</button>
+                  </div>
                 </div>
-                <div class="col-12 col-md-4">               
-                        <img src="img/logoGuideScoutGrey.png" class="d-block img-fluid"  alt="">
-                    </div>
-                    <div class="col-12 col-md-4">               
-                            <img src="img/logoGuideScoutGrey.png" class="d-block img-fluid"  alt="">
+              </div>
+      </div>
+      <!-- Modal -->
+<div class="modal fade" id="ania" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header bg-warning text-center">
+                    <h3 class="modal-title font-weight-bold" id="exampleModalLabel">Ania</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="img-fluid" src="img/ania.jpg" alt="local guide">
+                    <p class="m-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellat, ipsum dolorum ab dignissimos quae aperiam, dolores nisi perferendis ad voluptates recusandae? Doloremque, nesciunt necessitatibus. Voluptatum explicabo vero in incidunt?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning">Book With Ania</button>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="maria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header bg-warning text-center">
+                    <h3 class="modal-title font-weight-bold" id="exampleModalLabel">Maria</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="img-fluid" src="img/maria640x640.jpg" alt="local guide">
+                    <p class="m-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellat, ipsum dolorum ab dignissimos quae aperiam, dolores nisi perferendis ad voluptates recusandae? Doloremque, nesciunt necessitatibus. Voluptatum explicabo vero in incidunt?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning">Book with Maria</button>
+                  </div>
+                </div>
+              </div>
+      </div>
+      <!-- Food section-->
+      <div id="food-header" class="jumbotron jumbotron-fluid white-jumbo">
+            <h2 class="text-center">Food and Wine </h2>
+      </div>
+       <section id="food-guides">
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">                
+                                  <img class="card-img-top" src="img/spiceMarketTour640x360.jpg" alt="Card image cap">
+                                   <div class="card-body" style="position:relative;">
+                                     <img class="small-image rounded-circle" src="img/saih-small.jpg" alt="" class="d-block">  
+                                     <h3 class="card-title text-center mt-5 text-danger">Explore the Market</h3>
+                                     <h4 class="text-center mb-5">by Saih</h4>
+                                     <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                     <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                     <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                     <a href="#booking-header" class="btn btn-warning text-white mx-5">Book It</a>
+                                   </div>
+                                 </div>
+                    </div>    
+                <div class="col-md-6">
+                       <div class="card">
+                              <div class="card">
+                                <img class="card-img-top" src="img/wineTour640x360.jpg" alt="Card image cap">
+                                <div class="card-body" style="position:relative;">
+                                  <img class="small-image rounded-circle" src="img/saih-small.jpg" alt="" class="d-block">  
+                                  <h3 class="card-title text-center mt-5 text-danger">Wine and Dine</h3>
+                                  <h4 class="text-center mb-5">by Saih</h4>
+                                  <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  <a href="#booking-header" class="btn btn-warning text-white mx-5">Book It</a>
+                                </div>
+                              </div>
+                       </div>
+                   </div>    
+       </section>
+<!--Adventures Section-->
+  <div id="adventure-header" class="jumbotron jumbotron-fluid green-jumbo">
+        <h2 class="text-center">Adventure </h2>
+  </div>
+   <section id="adventure-guides">
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">                
+                              <img class="card-img-top" src="img/adventures640x340.jpg" alt="Card image cap">
+                               <div class="card-body" style="position:relative;">
+                                 <img class="small-image rounded-circle" src="img/tania-small.jpg" alt="" class="d-block">  
+                                 <h3 class="card-title text-center mt-5 text-danger">Nature Tour</h3>
+                                 <h4 class="text-center mb-5">by Tania</h4>
+                                 <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                 <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                 <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                 <a href="#booking-header" class="btn btn-warning text-white mx-5">Book It</a>
+                               </div>
+                             </div>
+                </div>          
+            <div class="col-md-6">
+                   <div class="card">
+                          <div class="card">
+                            <img class="card-img-top" src="img/adventures2-640x360.jpg" alt="Card image cap">
+                            <div class="card-body" style="position:relative;">
+                              <img class="small-image rounded-circle" src="img/tania-small.jpg" alt="" class="d-block">  
+                              <h3 class="card-title text-center mt-5 text-danger">Zip Lining </h3>
+                              <h4 class="text-center mb-5">by Tania</h4>
+                              <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#booking-header" class="btn btn-warning text-white mx-5">Book It</a>
+                            </div>
+                          </div>
+                   </div>
+               </div>    
+   </section>
+  <!--Culture Section-->
+   <div id="culture-header" class="jumbotron jumbotron-fluid white-jumbo">
+    <h2 class="text-center">Culture</h2>
+</div>
+<section id="culture-guides">
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">                
+                          <img class="card-img-top" src="img/historictour640x360.jpg" alt="Card image cap">
+                           <div class="card-body" style="position:relative;">
+                             <img class="small-image rounded-circle" src="img/ania-small.jpg" alt="" class="d-block">  
+                             <h3 class="card-title text-center mt-5 text-danger">The City Tour</h3>
+                             <h4 class="text-center mb-5">by Ania</h4>
+                             <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                             <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                             <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                             <a href="#booking-header" class="btn btn-warning text-white mx-5">Book It</a>
+                           </div>
+                         </div>
+            </div>
+        <div class="col-md-6">
+               <div class="card">
+                      <div class="card">
+                        <img class="card-img-top" src="img/museumtour640x360.jpg" alt="Card image cap">
+                        <div class="card-body" style="position:relative;">
+                          <img class="small-image rounded-circle" src="img/ania-small.jpg" alt="" class="d-block">  
+                          <h3 class="card-title text-center mt-5 text-danger">Museums Tour</h3>
+                          <h4 class="text-center mb-5">by Ania</h4>
+                          <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#booking-header" class="btn btn-warning text-white mx-5">Book It</a>
                         </div>
+                      </div>
+               </div>
+           </div>    
+</section>
+<!--Events Section-->
+<div id="events-header" class="jumbotron jumbotron-fluid light-grey-jumbo">
+  <h2 class="text-center">Events</h2>
+</div>
+<section id="events-guides">
+<div class="container mb-5">
+  <div class="row">
+      <div class="col-md-6">
+          <div class="card">                
+                        <img class="card-img-top" src="img/events-wedding640x360.jpg" alt="Card image cap">
+                         <div class="card-body" style="position:relative;">
+                           <img class="small-image rounded-circle" src="img/maria-small.jpg" alt="" class="d-block">  
+                           <h3 class="card-title text-center mt-5 text-danger">Destination Wedding</h3>
+                           <h4 class="text-center mb-5">by Ania</h4>
+                           <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                           <a href="#booking-header" class="btn btn-warning text-white mx-5">Book It</a>
+                         </div>
+                       </div>
+          </div>      
+      <div class="col-md-6">
+             <div class="card">
+                    <div class="card">
+                      <img class="card-img-top" src="img/events-destination640x360.jpg" alt="Card image cap">
+                      <div class="card-body" style="position:relative;">
+                        <img class="small-image rounded-circle" src="img/maria-small.jpg" alt="" class="d-block">  
+                        <h3 class="card-title text-center mt-5 text-danger">Party on Board</h3>
+                        <h4 class="text-center mb-5">by Ania</h4>
+                        <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="mx-5 mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#booking-header" class="btn btn-warning text-white mx-5">Book It</a>
+                      </div>
+                    </div>
+             </div>
+         </div>    
+</section>
+
+<!--Booking Form-->
+<div id="booking-header" class="jumbotron jumbotron-fluid light-grey-jumbo">
+    <h2 class="text-center">Book a Tour</h2>
+  </div>
+<section id="booking">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-8 mx-md-auto p-3 mb-5">
+        <form id="client-form">
+            <div class="form-group">
+                <label for="email">Trip Description</label>
+                <input type="email" class="form-control" id="email" placeholder="Market Tour with Saih" disabled>
+              </div>          
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email...">
+              </div>
+              <div class="form-group">
+                  <label for="num-people">Number of People in your Group</label>
+                  <input type="number" name="quantity" min="1" max="10" id="num-people" class="form-control">
+                </div>          
+              <div class="form-group">
+                <label for="date">Choose a Date</label>
+                <input type="date" class="form-control" id="date" >
+              </div>  
+              <div class="form-group">
+                  <label for="comment">Comment</label>
+                  <textarea class="form-control" rows="5" id="comment" placeholder="Any comments you have..."></textarea>
+                </div>
+              <button type="submit" class="btn btn-secondary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!--Contact Us-->
+<section id="contact-info">
+  <div class="container">
+  <div class="row py-5">
+    <div class="col-12 col-sm-6 pb-5">
+     <h4>Our Office</h4>
+     <p>4602 Neverland, Everland TX 75002</p>
+     <p></p>
+    </div>
+    <div class="col-12 col-sm-6 ">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-phone"></i>888-800-8888</p>
+      <p><i class="fas fa-envelope-square"></i>thora.asterix@gmail.com</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!--Footer-->
+    <footer id="page-footer">
+    <div class="container-fluid">
+            <div class="row ">
+                <div class="col-12 col-md-4 my-5">               
+                   <a href="#header"> <img src="img/logoGuideScoutGrey.png" class="d-block img-fluid mx-auto"  alt="logoGuideScout"></a>
+                </div>
+                <div class="col-12 col-md-4 d-flex justify-content-around align-items-center mb-5 mb-md-0">               
+                      <div><a href="#"><i class="fab fa-twitter-square"></i></a></div>  
+                      <div><a href="#"><i class="fab fa-facebook-square"></i></a></div>
+                      <div><a href=""><i class="fab fa-instagram"></i></a></div>
+                    </div>
+                    <div id="page-footer-copyright" class="col-12 col-md-4 d-flex flex-column justify-content-center mb-3 mb-md-0 ">               
+                      <div class="align-self-center">Copyright <i class="far fa-copyright"></i>GuideScout</div>    
+                    
+                      <div class="align-self-center">design By Thora Petropoulos-Huang</div> 
+                  </div>
             </div>
     </div>
     </footer>
 
-
-
-
-
-
-`
 
 
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->

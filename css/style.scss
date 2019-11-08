@@ -1,17 +1,5 @@
-$deep-red: #990000;
-$deep-orange: #CC3300 ;
-$med-orange:  #da500e;
-$deep-yellow:  #FFCC33;
-$light-orange: #FF9900;
-$light-yellow: #FFFFCC;
-$deep-green: #336633;
-$med-grenn: #669933;
-$light-green: #66CC35;
-$med-brown: #683300;
-$light-blue: #6699CC ;
-$light-beige: #f6f1ea;
-$logo-brown: #695a60;
-
+@import './variables';
+@import './media-queries';
 
 body {
     
@@ -40,7 +28,8 @@ body {
 
 #main-nav {
  background-color: $med-orange;
-
+    font-weight: 400;
+    font-size: 1.2rem;
     color: white;
 
     .navbar-brand  {
@@ -59,7 +48,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(153, 0, 0, 0.4);
+    background-color: $red-over;
 }
 
 #guides-panel {
@@ -69,6 +58,7 @@ body {
         // color: $gray-700;
     }
 }
+
  
 #local-guides {
 
@@ -83,7 +73,7 @@ body {
 
     a:hover,
     a:active {
-        font-size: 4rem;
+        font-size: 3rem;
         color: $light-orange;
    }
   }
@@ -93,7 +83,7 @@ body {
     // padding: 3rem 0 3rem;    
     // background-color: $deep-red;   
     div:hover {
-        background:  rgba(212,205,17,.7);
+     background:  $green-yellow;
     }
 
   }
@@ -118,74 +108,77 @@ body {
 
 }
 
-.jumbotron {
-    background-color: rgba(211,211,211,0.4);
-    color: $light-orange;
+#page-footer {
+    background-color: $light-orange;
 }
-//Media Queries
+#page-footer-copyright,
+#contact-info {
+    color: $logo-brown;
+    font-size: 1rem;
+    font-weight: 700;
+}
 
-@media only screen and (min-width: 576px) {
+#contact-info {
+    background-color: $light-beige;
+}
 
-    #header {
-        min-height: 500px;
-        background-image: url(../img/traveling.jpg);
-        background-position: top;
-        background-attachment: fixed;
-        position: relative;
-        
-        h1 {
-            font-weight: 300;
-            font-size: 3rem;
-            color: $light-beige;
-        }
-    
-        button {
-            color: $deep-orange;
-        }
+#client-form {
+    background-color: $light-grey;
+    border-radius: 25px;
+    padding: 2rem;
+
+    label {
+        color: $logo-brown;
+        font-weight: 700;
     }
 }
-  
-
-
-@media only screen and (min-width: 768px) {
-
-    #header {
-        min-height: 500px;
-        background-image: url(../img/traveling.jpg);
-        background-position: top;
-        background-attachment: fixed;
-        position: relative;
-        
-        h1 {
-            font-weight: 300;
-            font-size: 4rem;
-            color: $light-beige;
-        }
-    
-        button {
-            color: $deep-orange;
-        }
-    }
+// Utility classes
+.card-body {
+    position: relative;
 }
-  
-@media only screen and (min-width: 992px) {
-
-    #header {
-        min-height: 500px;
-        background-image: url(../img/traveling.jpg);
-        background-position: top;
-        background-attachment: fixed;
-        position: relative;
-        
-        h1 {
-            font-weight: 300;
-            font-size: 5rem;
-            color: $light-beige;
-        }
-    
-        button {
-            color: $deep-orange;
-        }
-    }
+@mixin any-jumbo($background,$color){
+    background-color: $background;
+    color: $color;
 }
+
+.white-jumbo {
+    @include any-jumbo(#fff,$deep-green);
   
+}
+.grey-jumbo {
+    @include any-jumbo($dark-grey,$light-orange);
+
+}
+
+.green-jumbo {
+    @include any-jumbo($dark-khaki), $light-yellow);
+   
+}
+
+.light-grey-jumbo {
+    @include any-jumbo($light-grey, $light-orange);
+   
+}
+
+.small-image {
+    position: absolute;
+     top:-130px; 
+     left:50%; 
+     padding: 5px; 
+     border: 5px solid orange;
+     transform: translateX(-50%);
+}
+
+.fab {
+    font-size: 4rem;
+    color: $logo-brown;
+}
+
+.fas {
+    font-size: 1.5rem;
+    margin-right: .3rem;
+}
+.far {
+    font-size: 1.5rem;
+    margin-right: .3rem;
+}
