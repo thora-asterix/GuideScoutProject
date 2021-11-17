@@ -1,3 +1,3 @@
 # GuideScoutProject
 
-Bootstrap Project
+Bootstrap Website Project
